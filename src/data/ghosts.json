@@ -72,8 +72,139 @@
     "huntThreshold": 50,
     "evidence": ["Spirit Box", "Ghost Writing", "Freezing Temperatures"],
     "tips": [
-      "Moroi's curse the players they respond to on the Spirit Box, doubling their sanity drain rate. You can test for a Moroi by raising your sanity to 100%, entering the location with a candle, and receiving a response on the spirit box. If your sanity continues to drain (screen available) or you're able to take another pill (screen broken), it's a Moroi.",
+      "Moroi's curse the players they respond to on the Spirit Box, doubling their sanity drain rate. You can test for a Moroi by raising your sanity to 100%, entering the location with a lit candle, and receiving a response on the spirit box. If your sanity continues to drain (screen available) or you're able to take another pill (screen broken), it's a Moroi.",
       "Moroi's get faster the lower the sanity value is below 50% from 1.5m/s @ 50% to 2.25m/s @ 5%"
+    ]
+  },
+  {
+    "name": "Myling",
+    "huntThreshold": 50,
+    "evidence": ["EMF 5", "Ghost Writing", "Fingerprints"],
+    "tips": [
+      "Myling's footsteps are harder to detect during a hunt. They can only be heard within 12 meters, getting louder the closer they are.",
+      "If the footsteps are only heard when you're on the same floor and close enough to have electronics disrupted, it's likely a Myling.",
+      "Myling's are known for interacting with the Parabolic Microphone more often than other ghosts."
+    ]
+  },
+  {
+    "name": "Obake",
+    "huntThreshold": 50,
+    "evidence": ["EMF 5", "Ghost Orbs", "Fingerprints"],
+    "tips": [
+      "An Obake will shapeshift at least once during a hunt, with a standard 6.67% chance of it happening again per \"flicker\".",
+      "Obake's sometimes don't leave fingerprints when interacting and their fingerprints fade faster."
+    ]
+  },
+  {
+    "name": "Oni",
+    "huntThreshold": 50,
+    "evidence": ["EMF 5", "Freezing Temperatures", "D.O.T.S"],
+    "tips": [
+      "Oni's are more active when people are nearby and drains their sanity faster.",
+      "Oni's flicker less than other ghosts during hunts and cannot perform the white smoke ghost event."
+    ]
+  },
+  {
+    "name": "Onryo",
+    "huntThreshold": 50,
+    "evidence": ["Spirit Box", "Ghost Orbs", "Freezing Temperatures"],
+    "tips": [
+      "Onyro's can hunt at any sanity after blowing out a candle.",
+      "The more dead players the more likely for the Onyro to blow out a flame."
+    ]
+  },
+  {
+    "name": "Phantom",
+    "huntThreshold": 50,
+    "evidence": ["Spirit Box", "Fingerprints", "D.O.T.S"],
+    "tips": [
+      "Phantom's fade out longer than other ghosts during a hunt (more than 1 second).",
+      "A photo of a Phantom will be labeled \"ghost\" but the Phantom will not be visible on the picture.",
+      "Phantom's drain the sanity of those who look at it at a faster rate."
+    ]
+  },
+  {
+    "name": "Raiju",
+    "huntThreshold": 50,
+    "evidence": ["EMF 5", "Ghost Orbs", "D.O.T.S"],
+    "tips": [
+      "Raiju's can hunt at 65% if near active electrical equipment.",
+      "Raiju's are more aggressive is near active electrical equipment.",
+      "Electrical equipment is powered investigation gear and powered environmental items, such as a light, TV, or breaker."
+    ]
+  },
+  {
+    "name": "Revenant",
+    "huntThreshold": 50,
+    "evidence": ["Ghost Orbs", "Ghost Writing", "Freezing Temperatures"],
+    "tips": [
+      "Revenant's are slow while searching for a target, but significantly faster once they see their target.",
+      "This speed boost lasts until it reaches the point where it last saw it's target"
+    ]
+  },
+  {
+    "name": "Spirit",
+    "huntThreshold": 50,
+    "evidence": ["EMF 5", "Ghost Writing", "Spirit Box"],
+    "tips": [
+      "Spirits are a baseline ghost with no distinct strengths.",
+      "Spirits are affected by a pre-hunt smudge for 180 seconds, over the normal 90 seconds."
+    ]
+  },
+  {
+    "name": "Thaye",
+    "huntThreshold": 75,
+    "evidence": ["Ghost Orbs", "Ghost Writing", "D.O.T.S"],
+    "tips": [
+      "Thaye's age rapidly. If you check with a Oujia board, you'll see the Thaye age over time. They will get slower and hunt at a lower threshold as they age.",
+      "Thaye's will only age every 1-2 minutes IF a player is in the room, otherwise it will check again in 30 seconds."
+    ]
+  },
+  {
+    "name": "The Mimic",
+    "huntThreshold": 100,
+    "evidence": ["Spirit Box", "Fingerprints", "Freezing Temperatures"],
+    "tips": [
+      "As their name suggests, this ghost can Mimic the abilities of other ghosts and will change many times during the investigation.",
+      "Mimic's will ALWAYS present spirit orbs as a piece of evidence, sometimes being the 4th evidence."
+    ]
+  },
+  {
+    "name": "The Twins",
+    "huntThreshold": 50,
+    "evidence": ["EMF 5", "Spirit Box", "Freezing Temperatures"],
+    "tips": [
+      "Twin's have a 50% chance to start the hunt in either the ghost room or the room it last had an interaction in using it's ability.",
+      "The crucifix must be in the location where the hunt starts.",
+      "If the hunt starts outside of the ghost room, the ghost will be slightly faster."
+    ]
+  },
+  {
+    "name": "Wraith",
+    "huntThreshold": 50,
+    "evidence": ["EMF 5", "Spirit Box", "D.O.T.S"],
+    "tips": [
+      "While NOT hunting Wraith's will sometimes teleport within 3 meters of a random player, triggering an EMF 2 (25% chance for EMF 5) reading at the player.",
+      "A wraith will NEVER step in a pile of salt."
+    ]
+  },
+  {
+    "name": "Yokai",
+    "huntThreshold": 50,
+    "evidence": ["Ghost Orbs", "Spirit Box", "D.O.T.S"],
+    "tips": [
+      "Yokai's become more angry if a player talks near them. This raises the hunt threshold to 80% temporarily.",
+      "Yokai's can only hear electronics within 2 meters of it's current location."
+    ]
+  },
+  {
+    "name": "Yurei",
+    "huntThreshold": 50,
+    "evidence": ["Ghost Orbs", "Freezing Temperatures", "D.O.T.S"],
+    "tips": [
+      "Smudging a Yurei before a hunt will banish it to it's ghost room and trap it for 60 seconds. It can leave for a ghost event, but will return after.",
+      "Yurei's ability can drain the sanity of all players within 7.5 meters by 15%.",
+      "If there is a door open in it's current room, it will shut one random door fully and present an EMF 2 reading. While all ghosts can do this, a Yurei will do it more often."
     ]
   }
 ]
