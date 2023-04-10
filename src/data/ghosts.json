@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Banshee",
+    "huntThreshold": 50,
+    "evidence": ["Fingerprints", "Ghost Orbs", "D.O.T.S"],
+    "tips": [
+      "Randomly targets one player at the start of the hunt and will only focus them. In multiplayer, will hunt based off INDIVIDUAL sanity, not group average.",
+      "Every parabolic microphone interaction has a 33%chance for a unique Banshee scream.",
+      "If attempting to complete the \"Repel a ghost while it's chasing someone\" objective, the \"someone\" must be the selected target."
+    ]
+  },
+  {
+    "name": "Demon",
+    "huntThreshold": 70,
+    "evidence": ["Fingerprints", "Ghost Writing", "Freezing Temperatures"],
+    "tips": [
+      "Demons have a 20 second hunt cooldown instead of the usual 25.",
+      "Smudging a demon (before the hunt) prevents hunts for 60 seconds instead of the usual 90."
+    ]
+  },
+  {
+    "name": "Deogen",
+    "huntThreshold": 40,
+    "evidence": ["Spirit Box", "Ghost Writing", "D.O.T.S"],
+    "tips": [
+      "If you're within 1 meter of a Deogen, there is a 33% chance for a unique \"bull-like breathing\" response.",
+      "Deogen's slow the closer to their target they are and ALWAYS knows the locations of players. Run from the Deogen, don't hide.",
+      "Deogen's pick the closest target at the start of the hunt. This will occasionally \"refresh\" and can be forced using a smudge."
+    ]
+  },
+  {
+    "name": "Goryo",
+    "huntThreshold": 50,
+    "evidence": ["EMF 5", "Fingerprints", "D.O.T.S"],
+    "tips": [
+      "Goryo's D.O.T.S silhouettes can only be seen via a video camera when the ghost room is empty.",
+      "A Goryo will never change ghost rooms, no matter the difficulty, unless wished with the monkey paw.",
+      "The roaming distance of a Goryo is VERY limited, they will not travel far from the ghost room unless hunting."
+    ]
+  },
+  {
+    "name": "Hantu",
+    "huntThreshold": 50,
+    "evidence": ["Ghost Orbs", "Freezing Temperatures", "Fingerprints"],
+    "tips": [
+      "Hantu's move faster in cold rooms and slower in warm rooms.",
+      "If the breaker is off, you can see a Hantu's breath during a hunt.",
+      "Hantu evidence matches a mimic as well, be sure to check the Spirit Box. If you receive a response, it's a Mimic NOT a Hantu."
+    ]
+  },
+  {
+    "name": "Jinn",
+    "huntThreshold": 50,
+    "evidence": ["EMF 5", "Freezing Temperatures", "Fingerprints"],
+    "tips": [
+      "Jinn's will NOT turn off a breaker. However, they can still accidentally overload a breaker and turn it off by turning on a light.",
+      "The Jinn's special abilities all players in the same room or within 3 meters will lose 25% of their sanity. The breaker will read 2 or 5 on the EMF."
+    ]
+  },
+  {
+    "name": "Mare",
+    "huntThreshold": 60,
+    "evidence": ["Spirit Box", "Ghost Orbs", "Ghost Writing"],
+    "tips": [
+      "If the lights are on in the same room as the Mare, the hunt threshold drops to <= 40% sanity.",
+      "A Mare will NOT turn on a light, however, they are more likely to trigger a light shatter ghost event.",
+      "You can test for a mare by turning a light on and seeing if it immedatiely turns the lights off. There is only a chance for this interaction. Try to pause a few seconds between attempts."
+    ]
+  },
+  {
+    "name": "Moroi",
+    "huntThreshold": 50,
+    "evidence": ["Spirit Box", "Ghost Writing", "Freezing Temperatures"],
+    "tips": [
+      "Moroi's curse the players they respond to on the Spirit Box, doubling their sanity drain rate. You can test for a Moroi by raising your sanity to 100%, entering the location with a candle, and receiving a response on the spirit box. If your sanity continues to drain (screen available) or you're able to take another pill (screen broken), it's a Moroi.",
+      "Moroi's get faster the lower the sanity value is below 50% from 1.5m/s @ 50% to 2.25m/s @ 5%"
+    ]
+  }
+]
