@@ -24,7 +24,9 @@ export default function GhostCard(props: GhostCardProps) {
         <p className="font-bold">Tips</p>
         <ul className="grid gap-2">
           {props.ghost.tips?.map((tip) => (
-            <li className="bg-neutral-200 p-2 rounded text-xs">{tip}</li>
+            <li key={tip} className="bg-neutral-200 p-2 rounded text-xs">
+              {tip}
+            </li>
           ))}
         </ul>
       </div>
