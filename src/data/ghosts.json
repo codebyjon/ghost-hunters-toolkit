@@ -5,7 +5,7 @@
     "evidence": ["Fingerprints", "Ghost Orbs", "D.O.T.S"],
     "tips": [
       "Randomly targets one player at the start of the hunt and will only focus them. In multiplayer, will hunt based off INDIVIDUAL sanity, not group average.",
-      "Every parabolic microphone interaction has a 33%chance for a unique Banshee scream.",
+      "Every parabolic microphone interaction has a 33% chance for a unique Banshee scream.",
       "If attempting to complete the \"Repel a ghost while it's chasing someone\" objective, the \"someone\" must be the selected target."
     ]
   },
