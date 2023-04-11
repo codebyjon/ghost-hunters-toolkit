@@ -144,6 +144,16 @@
     ]
   },
   {
+    "name": "Shade",
+    "huntThreshold": 50,
+    "evidence": ["EMF 5", "Ghost Writing", "Freezing Temperatures"],
+    "tips": [
+      "Shades are less likely to interact based on current sanity. This is reduced by 2% per sanity percentage lost. At 50% sanity, there is no penalty to the change of an interaction.",
+      "Shades are more likely (67% chance per event) to trigger the ghost mists event or to manifest as a shadow figure.",
+      "When a player is in the same room as a Shade it will only interact with Ghost Writing and will not start a hunt. Should the Shade wander out of the room, it can interact and hunt as normal."
+    ]
+  },
+  {
     "name": "Spirit",
     "huntThreshold": 50,
     "evidence": ["EMF 5", "Ghost Writing", "Spirit Box"],

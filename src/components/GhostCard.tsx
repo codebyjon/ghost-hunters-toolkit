@@ -6,7 +6,7 @@ type GhostCardProps = {
 
 export default function GhostCard(props: GhostCardProps) {
   return (
-    <div className="grid gap-4 p-4 bg-neutral-100 rounded content-start">
+    <div className="grid gap-4 p-4 bg-neutral-100 rounded content-start max-w-sm justify-self-center">
       <p className="text-3xl font-bold">{props.ghost.name}</p>
       <div>
         <p className="font-bold">Hunt Threshold</p>
