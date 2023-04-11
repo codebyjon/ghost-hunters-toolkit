@@ -5,11 +5,6 @@ import Ghost from "@/models/Ghost";
 import ghostData from "@/data/ghosts.json";
 
 export default function IndexPage() {
-  const [state, setState] = useState<{ ghosts: Ghost[]; evidence: string[] }>({
-    ghosts: [],
-    evidence: [],
-  });
-
   const evidence = [
     "D.O.T.S",
     "EMF 5",
@@ -29,13 +24,6 @@ export default function IndexPage() {
     );
   });
 
-  useEffect(() => {
-    setState((prevState) => ({
-      ...prevState,
-      ghosts,
-    }));
-  }, []);
-
   function handleEvidenceToggle(event: ChangeEvent<HTMLInputElement>) {}
 
   return (
@@ -46,13 +34,13 @@ export default function IndexPage() {
           <EvidenceField
             key={evidenceName}
             name={evidenceName}
-            onClick={handleEvidenceToggle}
+            onChange={handleEvidenceToggle}
           />
         ))}
       </fieldset>
 
       <div className="grid gap-4 grid-cols-ghosts">
-        {state.ghosts.map((ghost) => (
+        {ghosts.map((ghost) => (
           <GhostCard key={ghost.name} ghost={ghost} />
         ))}
       </div>
