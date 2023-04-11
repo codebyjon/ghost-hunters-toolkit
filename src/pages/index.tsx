@@ -3,44 +3,84 @@ import EvidenceField from "@/components/EvidenceField";
 import GhostCard from "@/components/GhostCard";
 import Ghost from "@/models/Ghost";
 import ghostData from "@/data/ghosts.json";
+import evidenceData from "@/data/evidence.json";
+
+type AppState = {
+  ghosts: Ghost[];
+  gatheredEvidence: {
+    [name: string]: boolean;
+  };
+};
+
+let ghosts = ghostData.map((ghost) => {
+  return new Ghost(ghost.name, ghost.huntThreshold, ghost.evidence, ghost.tips);
+});
+
+let gatheredEvidence = evidenceData.reduce((prev, curr) => {
+  prev[curr.name] = false;
+  return prev;
+}, {} as AppState["gatheredEvidence"]);
 
 export default function IndexPage() {
-  const evidence = [
-    "D.O.T.S",
-    "EMF 5",
-    "Fingerprints",
-    "Freezing Temperatures",
-    "Ghost Orbs",
-    "Ghost Writing",
-    "Spirit Box",
-  ];
-
-  let ghosts: Array<Ghost> = ghostData.map((ghost) => {
-    return new Ghost(
-      ghost.name,
-      ghost.huntThreshold,
-      ghost.evidence,
-      ghost.tips
-    );
+  const [state, setState] = useState<AppState>({
+    ghosts: [],
+    gatheredEvidence: {},
   });
 
-  function handleEvidenceToggle(event: ChangeEvent<HTMLInputElement>) {}
+  useEffect(() => {
+    const currentEvidence = Object.entries(state.gatheredEvidence).filter(
+      (evidence) => evidence[1]
+    );
+
+    if (currentEvidence.length !== 0) {
+      const filteredGhosts = ghostData.filter((ghost) => {
+        return currentEvidence.every((ce) => ghost.evidence.includes(ce[0]));
+      });
+
+      return setState((prevState) => ({
+        ...prevState,
+        ghosts: filteredGhosts,
+      }));
+    }
+
+    setState(() => ({
+      ghosts,
+      gatheredEvidence,
+    }));
+  }, [state.gatheredEvidence]);
+
+  function handleEvidenceToggle(event: ChangeEvent<HTMLInputElement>) {
+    const targetEvidence = event.currentTarget.id;
+    const targetStatus = event.currentTarget.checked;
+
+    setState((prevState) => ({
+      ...prevState,
+      gatheredEvidence: {
+        ...prevState.gatheredEvidence,
+        [targetEvidence]: targetStatus,
+      },
+    }));
+  }
 
   return (
     <main className="container mx-auto grid gap-4 p-4">
       <fieldset className="flex flex-wrap border gap-4 p-4">
         <legend className="font-bold">Evidence</legend>
-        {evidence.map((evidenceName) => (
+        {evidenceData.map((evidence) => (
           <EvidenceField
-            key={evidenceName}
-            name={evidenceName}
+            key={evidence.name}
+            name={evidence.name}
             onChange={handleEvidenceToggle}
           />
         ))}
       </fieldset>
 
+      <h1 className="text-neutral-400 text-xl">
+        ALPHA VERSION 1 | WORK IN PROGRESS
+      </h1>
+
       <div className="grid gap-4 grid-cols-ghosts">
-        {ghosts.map((ghost) => (
+        {state.ghosts.map((ghost) => (
           <GhostCard key={ghost.name} ghost={ghost} />
         ))}
       </div>

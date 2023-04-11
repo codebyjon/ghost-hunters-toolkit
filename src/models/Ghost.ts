@@ -8,16 +8,11 @@ type Evidence =
   | "Spirit Box";
 
 export default class Ghost {
-  name: string;
-  huntThreshold: number;
-  evidence: string[];
-  tips?: string[];
-
   constructor(
-    name: string,
-    huntThreshold: number,
-    evidence: string[],
-    tips: string[] = []
+    public name: string,
+    public huntThreshold: number,
+    public evidence: string[],
+    public tips: string[] | undefined = []
   ) {
     this.name = name;
     this.huntThreshold = huntThreshold;
