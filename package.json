@@ -1,6 +1,6 @@
 {
-  "name": "ghost-hunter-toolkit-expanded",
-  "version": "0.1.0",
+  "name": "ghost-hunters-toolkit",
+  "version": "0.0.1a",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -64,6 +64,28 @@ export default function IndexPage() {
 
   return (
     <main className="container mx-auto grid gap-4 p-4">
+      <h1 className="text-neutral-400 text-xl">VERSION 1 | WORK IN PROGRESS</h1>
+      <hr />
+      <p className="text-xs">
+        Thank you for using my app! I hope it helps the game feel more enjoyable
+        and provides that little bit of extra knowledge to identify the ghost
+        that much easier.
+      </p>
+      <p className="text-xs">
+        If you find any bugs/misinformation or want to provide any
+        feedback/ideas, please visit{" "}
+        <a
+          target="_blank"
+          href="https://discord.gg/TapgjEKDC8"
+          className="text-blue-400"
+        >
+          my Discord server
+        </a>
+        !
+      </p>
+
+      <hr />
+
       <fieldset className="flex flex-wrap border gap-4 p-4">
         <legend className="font-bold">Evidence</legend>
         {evidenceData.map((evidence) => (
@@ -74,10 +96,6 @@ export default function IndexPage() {
           />
         ))}
       </fieldset>
-
-      <h1 className="text-neutral-400 text-xl">
-        ALPHA VERSION 1 | WORK IN PROGRESS
-      </h1>
 
       <div className="grid gap-4 grid-cols-ghosts">
         {state.ghosts.map((ghost) => (
