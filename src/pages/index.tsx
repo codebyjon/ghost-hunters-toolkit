@@ -1,70 +1,71 @@
-import { ChangeEvent, useEffect, useState } from "react";
+import type { ChangeEvent } from "react";
+
+import { useContext, useEffect } from "react";
+import AppContext from "@/context/AppContext";
 import EvidenceField from "@/components/EvidenceField";
 import GhostCard from "@/components/GhostCard";
-import Ghost from "@/models/Ghost";
-import ghostData from "@/data/ghosts.json";
-import evidenceData from "@/data/evidence.json";
-
-type AppState = {
-  ghosts: Ghost[];
-  gatheredEvidence: {
-    [name: string]: boolean;
-  };
-};
-
-let ghosts = ghostData.map((ghost) => {
-  return new Ghost(ghost.name, ghost.huntThreshold, ghost.evidence, ghost.tips);
-});
-
-let gatheredEvidence = evidenceData.reduce((prev, curr) => {
-  prev[curr.name] = false;
-  return prev;
-}, {} as AppState["gatheredEvidence"]);
 
 export default function IndexPage() {
-  const [state, setState] = useState<AppState>({
-    ghosts: [],
-    gatheredEvidence: {},
-  });
+  const { appData, setAppData } = useContext(AppContext);
 
   useEffect(() => {
-    const currentEvidence = Object.entries(state.gatheredEvidence).filter(
-      (evidence) => evidence[1]
-    );
+    filterGhosts();
+  }, [appData.evidence]);
 
-    if (currentEvidence.length !== 0) {
-      const filteredGhosts = ghostData.filter((ghost) => {
-        return currentEvidence.every((ce) => ghost.evidence.includes(ce[0]));
-      });
+  function filterGhosts() {
+    const gatheredEvidence = Object.entries(appData.evidence)
+      .filter((evidence) => evidence[1] === 1)
+      .map((evidence) => evidence[0]);
 
-      return setState((prevState) => ({
-        ...prevState,
-        ghosts: filteredGhosts,
-      }));
-    }
+    const excludedEvidence = Object.entries(appData.evidence)
+      .filter((evidence) => evidence[1] === 2)
+      .map((evidence) => evidence[0]);
 
-    setState(() => ({
-      ghosts,
-      gatheredEvidence,
+    const filteredGhosts = appData.ghosts.filter((ghost) => {
+      const hasAllGathered = gatheredEvidence.every((ge) =>
+        ghost.evidence.includes(ge)
+      );
+      const hasNoExcluded = excludedEvidence.every(
+        (ee) => !ghost.evidence.includes(ee)
+      );
+
+      if (hasAllGathered && hasNoExcluded) return true;
+    });
+
+    setAppData((prevState: any) => ({
+      ...prevState,
+      filteredGhosts,
     }));
-  }, [state.gatheredEvidence]);
+  }
 
   function handleEvidenceToggle(event: ChangeEvent<HTMLInputElement>) {
-    const targetEvidence = event.currentTarget.id;
-    const targetStatus = event.currentTarget.checked;
+    const targetEvidence = event.currentTarget;
+    let nextStep: number;
 
-    setState((prevState) => ({
+    if (appData.evidence[targetEvidence.id] < 2) {
+      nextStep = appData.evidence[targetEvidence.id] + 1;
+    } else {
+      nextStep = 0;
+    }
+
+    if (nextStep === 2) {
+      targetEvidence.indeterminate = true;
+    }
+
+    setAppData((prevState: any) => ({
       ...prevState,
-      gatheredEvidence: {
-        ...prevState.gatheredEvidence,
-        [targetEvidence]: targetStatus,
+      evidence: {
+        ...prevState.evidence,
+        [targetEvidence.id]: nextStep,
       },
     }));
   }
 
   return (
     <main className="container mx-auto grid gap-4 p-4">
-      <h1 className="text-neutral-400 text-xl">VERSION 1 | WORK IN PROGRESS</h1>
+      <h1 className="text-neutral-400 text-xl">
+        VERSION 1.01 | WORK IN PROGRESS
+      </h1>
       <hr />
       <p className="text-xs">
         Thank you for using my app! I hope it helps the game feel more enjoyable
@@ -83,22 +84,25 @@ export default function IndexPage() {
         </a>
         !
       </p>
+      <p className="text-xs font-medium text-emerald-600">
+        UPDATE: Added the ability to exclude evidence.
+      </p>
 
       <hr />
 
-      <fieldset className="flex flex-wrap border gap-4 p-4">
+      <fieldset className="flex flex-wrap border gap-4 p-4 select-none">
         <legend className="font-bold">Evidence</legend>
-        {evidenceData.map((evidence) => (
+        {Object.keys(appData.evidence).map((evidence) => (
           <EvidenceField
-            key={evidence.name}
-            name={evidence.name}
+            key={evidence}
+            name={evidence}
             onChange={handleEvidenceToggle}
           />
         ))}
       </fieldset>
 
       <div className="grid gap-4 grid-cols-ghosts">
-        {state.ghosts.map((ghost) => (
+        {appData.filteredGhosts.map((ghost) => (
           <GhostCard key={ghost.name} ghost={ghost} />
         ))}
       </div>
