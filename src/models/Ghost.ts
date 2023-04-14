@@ -1,12 +1,3 @@
-type Evidence =
-  | "D.O.T.S"
-  | "EMF 5"
-  | "Fingerprints"
-  | "Freezing Temperatures"
-  | "Ghost Orbs"
-  | "Ghost Writing"
-  | "Spirit Box";
-
 export default class Ghost {
   constructor(
     public name: string,
