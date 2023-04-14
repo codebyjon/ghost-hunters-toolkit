@@ -1,14 +1,10 @@
-import type AppProps from "next/app";
-import type Dispatch from "next/app";
-import type SetStateAction from "next/app";
-
 import ghostData from "@/data/ghosts.json";
 import evidenceData from "@/data/evidence.json";
 import Ghost from "@/models/Ghost";
 
-import { createContext, useState } from "react";
+import { Dispatch, SetStateAction, createContext, useState } from "react";
 
-type AppState = {
+export type AppState = {
   ghosts: Ghost[];
   evidence: {
     [name: string]: number;
@@ -30,7 +26,7 @@ const evidence = evidenceData.reduce((prev, curr) => {
   return prev;
 }, {} as AppState["evidence"]);
 
-const AppContext = createContext<AppContext>({} as AppContext);
+const AppContext = createContext({} as AppContext);
 
 export default AppContext;
 
