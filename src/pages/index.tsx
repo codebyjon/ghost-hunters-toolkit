@@ -1,6 +1,7 @@
 import type { ChangeEvent } from "react";
 
 import { useContext, useEffect } from "react";
+import Head from "next/head";
 import AppContext from "@/context/AppContext";
 import EvidenceField from "@/components/EvidenceField";
 import GhostCard from "@/components/GhostCard";
@@ -63,6 +64,9 @@ export default function IndexPage() {
 
   return (
     <main className="container mx-auto grid gap-4 p-4">
+      <Head>
+        <title>Ghost Hunter's Toolkit</title>
+      </Head>
       <h1 className="text-neutral-400 text-xl">
         VERSION 1.01 | WORK IN PROGRESS
       </h1>
