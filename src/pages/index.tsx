@@ -91,9 +91,7 @@ export default function IndexPage() {
       <p className="text-xs font-medium text-emerald-600">
         UPDATE: Added the ability to exclude evidence.
       </p>
-
       <hr />
-
       <fieldset className="flex flex-wrap border gap-4 p-4 select-none">
         <legend className="font-bold">Evidence</legend>
         {Object.keys(appData.evidence).map((evidence) => (
