@@ -68,7 +68,7 @@ export default function IndexPage() {
         <title>Ghost Hunter&apos;s Toolkit</title>
       </Head>
       <h1 className="text-neutral-400 text-xl">
-        VERSION 1.01 | WORK IN PROGRESS
+        VERSION 1.02 | WORK IN PROGRESS
       </h1>
       <hr />
       <p className="text-xs">
@@ -89,7 +89,8 @@ export default function IndexPage() {
         !
       </p>
       <p className="text-xs font-medium text-emerald-600">
-        UPDATE: Added the ability to exclude evidence.
+        UPDATE: Added the ability to exclude evidence & tips for ghosts with
+        forced evidence.
       </p>
       <hr />
       <fieldset className="flex flex-wrap border gap-4 p-4 select-none">
