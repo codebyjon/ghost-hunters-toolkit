@@ -15,6 +15,7 @@ export type AppState = {
 type AppContext = {
   appData: AppState;
   setAppData: Dispatch<SetStateAction<AppState>>;
+  resetEvidence: () => void;
 };
 
 const ghosts = ghostData.map((ghost) => {
@@ -37,8 +38,19 @@ export function AppContextProvider({ children }: { children: JSX.Element }) {
     filteredGhosts: ghosts,
   });
 
+  const resetEvidence = () => {
+    setAppData((prevState) => ({
+      ...prevState,
+      evidence,
+    }));
+
+    document
+      .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
+      .forEach((ele) => (ele.indeterminate = false));
+  };
+
   return (
-    <AppContext.Provider value={{ appData, setAppData }}>
+    <AppContext.Provider value={{ appData, setAppData, resetEvidence }}>
       {children}
     </AppContext.Provider>
   );

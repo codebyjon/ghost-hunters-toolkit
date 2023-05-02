@@ -7,7 +7,7 @@ import EvidenceField from "@/components/EvidenceField";
 import GhostCard from "@/components/GhostCard";
 
 export default function IndexPage() {
-  const { appData, setAppData } = useContext(AppContext);
+  const { appData, setAppData, resetEvidence } = useContext(AppContext);
 
   const filterGhosts = () => {
     const gatheredEvidence = Object.entries(appData.evidence)
@@ -68,7 +68,7 @@ export default function IndexPage() {
         <title>Ghost Hunter&apos;s Toolkit</title>
       </Head>
       <h1 className="text-neutral-400 text-xl">
-        VERSION 1.02 | WORK IN PROGRESS
+        VERSION 1.03 | WORK IN PROGRESS
       </h1>
       <hr />
       <p className="text-xs">
@@ -89,10 +89,14 @@ export default function IndexPage() {
         !
       </p>
       <p className="text-xs font-medium text-emerald-600">
-        UPDATE: Added the ability to exclude evidence & tips for ghosts with
-        forced evidence.
+        UPDATE: Added "reset evidence" button.
       </p>
       <hr />
+      <div className="align-left">
+        <button onClick={resetEvidence} className="bg-red-300 p-2 rounded">
+          Reset Evidence
+        </button>
+      </div>
       <fieldset className="flex flex-wrap border gap-4 p-4 select-none">
         <legend className="font-bold">Evidence</legend>
         {Object.keys(appData.evidence).map((evidence) => (
@@ -103,7 +107,6 @@ export default function IndexPage() {
           />
         ))}
       </fieldset>
-
       <div className="grid gap-4 grid-cols-ghosts">
         {appData.filteredGhosts.map((ghost) => (
           <GhostCard key={ghost.name} ghost={ghost} />

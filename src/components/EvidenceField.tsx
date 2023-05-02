@@ -1,7 +1,7 @@
 import type { ChangeEvent } from "react";
 
 import AppContext from "@/context/AppContext";
-import { useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 
 type EvidenceFieldProps = {
   name: string;
@@ -10,7 +10,12 @@ type EvidenceFieldProps = {
 
 const EvidenceField = (props: EvidenceFieldProps) => {
   const { appData } = useContext(AppContext);
-  const isExcluded = appData.evidence[props.name] === 2;
+  const [checked, setChecked] = useState(false);
+  let isExcluded = appData.evidence[props.name] === 2;
+
+  useEffect(() => {
+    setChecked((prevState) => appData.evidence[props.name] === 1);
+  }, [appData]);
 
   return (
     <label
@@ -23,7 +28,7 @@ const EvidenceField = (props: EvidenceFieldProps) => {
         type="checkbox"
         className="mr-1"
         onChange={props.onChange}
-        checked={Boolean(appData.evidence[props.name])}
+        checked={checked}
       />
       {props.name}
     </label>
