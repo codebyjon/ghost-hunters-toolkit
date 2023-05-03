@@ -207,7 +207,7 @@
   },
   {
     "name": "The Mimic",
-    "huntThreshold": 80,
+    "huntThreshold": 50,
     "evidence": ["Spirit Box", "Fingerprints", "Freezing Temperatures"],
     "tips": [
       "As their name suggests, this ghost can Mimic the abilities of other ghosts and will change many times during the investigation.",
