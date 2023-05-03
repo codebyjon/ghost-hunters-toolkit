@@ -28,7 +28,7 @@
     "huntThreshold": 40,
     "evidence": ["Spirit Box", "Ghost Writing", "D.O.T.S"],
     "tips": [
-      "this ghost is NOT affected by the hunt LOS speed boost.",
+      "This ghost is NOT affected by the hunt LOS speed boost.",
       "Deogen's move quickly then slow as they get closer than 6 meters to their target.",
       "Deogen's ALWAYS knows the locations of players. Run from the Deogen, don't hide.",
       "If you're within 1 meter of a Deogen, there is a 33% chance for a unique \"bull-like breathing\" response.",
@@ -51,7 +51,7 @@
     "huntThreshold": 50,
     "evidence": ["Ghost Orbs", "Freezing Temperatures", "Fingerprints"],
     "tips": [
-      "this ghost is NOT affected by the hunt LOS speed boost.",
+      "This ghost is NOT affected by the hunt LOS speed boost.",
       "Has a forced evidence of Freezing Temperatures on >= 1 evidence games.",
       "Hantu's movement speed ranges from 1.4m/s in warm rooms (> 15°C) to 2.7m/s (< 0°C).",
       "If the breaker is off, it's possible to see a Hantu's breath while it's hunting. Dead players cannot see this effect.",
@@ -169,7 +169,7 @@
     "huntThreshold": 50,
     "evidence": ["Ghost Orbs", "Ghost Writing", "Freezing Temperatures"],
     "tips": [
-      "this ghost is NOT affected by the hunt LOS speed boost.",
+      "This ghost is NOT affected by the hunt LOS speed boost.",
       "Revenant's are slow while searching for a target, but significantly faster once they see their target.",
       "This speed boost lasts until it reaches the point where it last saw it's target."
     ]
@@ -198,7 +198,7 @@
     "huntThreshold": 75,
     "evidence": ["Ghost Orbs", "Ghost Writing", "D.O.T.S"],
     "tips": [
-      "this ghost is NOT affected by the hunt LOS speed boost.",
+      "This ghost is NOT affected by the hunt LOS speed boost.",
       "These ghosts are more likely to interact with ghost writing and D.O.T.S than most other ghosts.",
       "Thaye's age rapidly. If you check with a Oujia board, you'll see the Thaye age over time. They will get slower and hunt at a lower threshold as they age.",
       "Every time the ghost ages, it loses 6% hunt threshold, 0.175m/s hunt speed, and 15% interaction chance (compared to base values).",
