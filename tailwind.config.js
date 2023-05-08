@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
+        layout: "auto 1fr",
         ghosts: "repeat(auto-fit, minmax(36ch, 1fr))",
       },
     },
