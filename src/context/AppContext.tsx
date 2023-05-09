@@ -1,7 +1,7 @@
 import ghostData from "@/data/ghosts.json";
 import evidenceData from "@/data/evidence.json";
 
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 // CONTEXT
 type AppContext = {
@@ -9,6 +9,7 @@ type AppContext = {
   allEvidence: Evidence[];
   evidenceStatus: AppState["evidenceStatus"];
   setEvidenceStatus: (n: string, s: string) => void;
+  resetEvidenceStatus: () => void;
 };
 
 const AppContext = createContext<AppContext>({} as AppContext);
@@ -24,33 +25,34 @@ type AppState = {
   };
 };
 
+const allGhosts = ghostData.map((data) => ({
+  ...data,
+  checkEvidence: (included: string[], excluded: string[]): boolean => {
+    if (
+      included.every((ie) => data.evidence.includes(ie)) &&
+      excluded.every((ee) => !data.evidence.includes(ee))
+    )
+      return true;
+
+    return false;
+  },
+}));
+
+const allEvidence = evidenceData.map((data) => ({
+  ...data,
+}));
+
+const evidenceStatus = evidenceData.reduce((prev, curr) => {
+  prev[curr.name] = "unknown";
+  return prev;
+}, {});
+
 export const AppContextProvider = (props: { children: JSX.Element }) => {
-  const [appState, setAppState] = useState({
-    allGhosts: [] as AppState["allGhosts"],
-    allEvidence: [] as AppState["allEvidence"],
-    evidenceStatus: {} as AppState["evidenceStatus"],
+  const [appState, setAppState] = useState<AppState>({
+    allGhosts,
+    allEvidence,
+    evidenceStatus,
   });
-
-  useEffect(() => {
-    const allGhosts = ghostData.map((data) => ({
-      ...data,
-    }));
-
-    const allEvidence = evidenceData.map((data) => ({
-      ...data,
-    }));
-
-    const evidenceStatus = evidenceData.reduce((prev, curr) => {
-      prev[curr.name] = "unknown";
-      return prev;
-    }, {});
-
-    setAppState({
-      allGhosts,
-      allEvidence,
-      evidenceStatus,
-    });
-  }, []);
 
   function setEvidenceStatus(name: string, status: string) {
     setAppState((prevState) => ({
@@ -62,6 +64,13 @@ export const AppContextProvider = (props: { children: JSX.Element }) => {
     }));
   }
 
+  function resetEvidenceStatus() {
+    setAppState((prevState) => ({
+      ...prevState,
+      evidenceStatus,
+    }));
+  }
+
   return (
     <AppContext.Provider
       value={{
@@ -69,6 +78,7 @@ export const AppContextProvider = (props: { children: JSX.Element }) => {
         allEvidence: appState.allEvidence,
         evidenceStatus: appState.evidenceStatus,
         setEvidenceStatus,
+        resetEvidenceStatus,
       }}
     >
       {props.children}
@@ -78,14 +88,15 @@ export const AppContextProvider = (props: { children: JSX.Element }) => {
 // =======
 
 // OBJECTS
-type Ghost = {
+export type Ghost = {
   name: string;
   huntThreshold: number;
   evidence: string[];
   tips: string[];
+  checkEvidence: (ie: string[], ee: string[]) => boolean;
 };
 
-type Evidence = {
+export type Evidence = {
   name: string;
   image_path: string;
 };

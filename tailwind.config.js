@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         layout: "auto 1fr",
-        ghosts: "repeat(auto-fit, minmax(36ch, 1fr))",
+        ghosts: "repeat(auto-fill, minmax(24rem, 1fr))",
       },
     },
   },
