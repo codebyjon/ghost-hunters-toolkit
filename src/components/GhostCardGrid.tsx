@@ -1,11 +1,13 @@
 import AppContext, { Ghost } from "@/context/AppContext";
+import { Icon } from "@iconify/react";
 
 import { useState, useEffect, useContext } from "react";
 
 type GhostCardGridProps = {};
 
 export default function GhostCardGrid(props: GhostCardGridProps) {
-  const { allGhosts, evidenceStatus } = useContext(AppContext);
+  const { allGhosts, evidenceStatus, excludedGhosts, excludeGhost } =
+    useContext(AppContext);
   const [state, setState] = useState<Ghost[]>([]);
 
   function getMatchingEvidence(status: string) {
@@ -21,17 +23,24 @@ export default function GhostCardGrid(props: GhostCardGridProps) {
     const excludedEvidence = getMatchingEvidence("excluded");
 
     setState(() =>
-      allGhosts.filter((ghost) =>
-        ghost.checkEvidence(includedEvidence, excludedEvidence)
+      allGhosts.filter(
+        (ghost) =>
+          ghost.checkEvidence(includedEvidence, excludedEvidence) &&
+          !excludedGhosts.includes(ghost.name)
       )
     );
-  }, [evidenceStatus]);
+  }, [evidenceStatus, excludedGhosts]);
 
   return (
     <div className="grid gap-2 grid-cols-ghosts p-4 justify-start content-start">
       {state.map((ghost) => (
         <div className="grid gap-4 p-4 bg-neutral-100 rounded content-start ">
-          <p className="text-3xl font-bold">{ghost.name}</p>
+          <div className="flex justify-between">
+            <p className="text-3xl font-bold">{ghost.name}</p>
+            <button onClick={() => excludeGhost(ghost.name)}>
+              <Icon icon="ic:baseline-close" className="w-6 h-6" />
+            </button>
+          </div>
           <div>
             <p className="font-bold">Hunt Threshold</p>
             <p className="text-xs">{ghost.huntThreshold}% Sanity</p>

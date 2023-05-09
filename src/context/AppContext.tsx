@@ -7,9 +7,13 @@ import { createContext, useState } from "react";
 type AppContext = {
   allGhosts: Ghost[];
   allEvidence: Evidence[];
+  excludedGhosts: string[];
   evidenceStatus: AppState["evidenceStatus"];
   setEvidenceStatus: (n: string, s: string) => void;
   resetEvidenceStatus: () => void;
+  excludeGhost: (n: string) => void;
+  clearGhostExclusions: () => void;
+  removeGhostFromExclusions: (n: string) => void;
 };
 
 const AppContext = createContext<AppContext>({} as AppContext);
@@ -20,6 +24,7 @@ export default AppContext;
 type AppState = {
   allGhosts: Ghost[];
   allEvidence: Evidence[];
+  excludedGhosts: string[];
   evidenceStatus: {
     [evidenceName: string]: string;
   };
@@ -51,6 +56,7 @@ export const AppContextProvider = (props: { children: JSX.Element }) => {
   const [appState, setAppState] = useState<AppState>({
     allGhosts,
     allEvidence,
+    excludedGhosts: [],
     evidenceStatus,
   });
 
@@ -71,14 +77,39 @@ export const AppContextProvider = (props: { children: JSX.Element }) => {
     }));
   }
 
+  function excludeGhost(name: string) {
+    setAppState((prevState) => ({
+      ...prevState,
+      excludedGhosts: [...prevState.excludedGhosts, name],
+    }));
+  }
+
+  function clearGhostExclusions() {
+    setAppState((prevState) => ({
+      ...prevState,
+      excludedGhosts: [],
+    }));
+  }
+
+  function removeGhostFromExclusions(name: string) {
+    setAppState((prevState) => ({
+      ...prevState,
+      excludedGhosts: prevState.excludedGhosts.filter((eg) => eg !== name),
+    }));
+  }
+
   return (
     <AppContext.Provider
       value={{
         allGhosts: appState.allGhosts,
         allEvidence: appState.allEvidence,
         evidenceStatus: appState.evidenceStatus,
+        excludedGhosts: appState.excludedGhosts,
         setEvidenceStatus,
         resetEvidenceStatus,
+        excludeGhost,
+        clearGhostExclusions,
+        removeGhostFromExclusions,
       }}
     >
       {props.children}
