@@ -34,11 +34,10 @@ export default function SideNav(props: SideNavProps) {
         </div>
       </div>
       <div>
-        <h2 className="font-medium text-lg uppercase">Evidence</h2>
-        <hr />
+        <h2 className="font-medium text-lg uppercase mb-2">Evidence</h2>
         <button
           onClick={resetEvidenceStatus}
-          className="bg-red-500/90 hover:bg-red-500/100 active:bg-red-600 p-2 rounded text-white uppercase font-medium mb-4"
+          className="bg-red-400/80 hover:bg-red-400/90 active:bg-red-400 py-1 p-2 rounded text-white uppercase font-medium mb-4"
         >
           Reset Evidence
         </button>
@@ -48,25 +47,35 @@ export default function SideNav(props: SideNavProps) {
         ))}
       </div>
       <div>
-        <h2 className="font-medium text-lg uppercase">Excluded Ghosts</h2>
-        <hr />
+        <h2 className="font-medium text-lg uppercase mb-2">Excluded Ghosts</h2>
         <button
           onClick={clearGhostExclusions}
-          className="bg-red-500/90 hover:bg-red-500/100 active:bg-red-600 p-2 rounded text-white uppercase font-medium mb-4"
+          className="bg-red-400/80 hover:bg-red-400/90 active:bg-red-400 py-1 p-2 rounded text-white uppercase font-medium mb-4"
         >
           Clear Exclusions
         </button>
         <div className="grid gap-2">
-          {excludedGhosts.map((ghost) => (
-            <button
-            key={ghost}
-              onClick={() => removeGhostFromExclusions(ghost)}
-              className="w-full grid grid-flow-col gap-2 items-center justify-start"
-            >
-              <Icon icon="ic:baseline-close" className="w-6 h-6 text-red-500" />
-              <span className="uppercase font-medium text-sm">{ghost}</span>
+          {excludedGhosts.length ? (
+            excludedGhosts.map((ghost) => (
+              <button
+                key={ghost}
+                onClick={() => removeGhostFromExclusions(ghost)}
+                className="w-full grid grid-flow-col gap-2 items-center justify-start"
+              >
+                <Icon
+                  icon="ic:baseline-close"
+                  className="w-6 h-6 text-red-500"
+                />
+                <span className="uppercase font-medium text-sm">{ghost}</span>
+              </button>
+            ))
+          ) : (
+            <button className="w-full grid grid-flow-col gap-2 items-center justify-start">
+              <span className="uppercase font-medium text-sm">
+                No Exclusions
+              </span>
             </button>
-          ))}
+          )}
         </div>
       </div>
     </aside>
