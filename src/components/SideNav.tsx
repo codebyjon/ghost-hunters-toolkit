@@ -59,6 +59,7 @@ export default function SideNav(props: SideNavProps) {
         <div className="grid gap-2">
           {excludedGhosts.map((ghost) => (
             <button
+            key={ghost}
               onClick={() => removeGhostFromExclusions(ghost)}
               className="w-full grid grid-flow-col gap-2 items-center justify-start"
             >

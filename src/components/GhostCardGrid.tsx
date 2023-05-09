@@ -34,7 +34,10 @@ export default function GhostCardGrid(props: GhostCardGridProps) {
   return (
     <div className="grid gap-2 grid-cols-ghosts p-4 justify-start content-start">
       {state.map((ghost) => (
-        <div className="grid gap-4 p-4 bg-neutral-100 rounded content-start ">
+        <div
+          key={ghost.name}
+          className="grid gap-4 p-4 bg-neutral-100 rounded content-start "
+        >
           <div className="flex justify-between">
             <p className="text-3xl font-bold">{ghost.name}</p>
             <button onClick={() => excludeGhost(ghost.name)}>
