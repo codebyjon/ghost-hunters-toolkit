@@ -38,6 +38,16 @@ export default function SideNav(props: SideNavProps) {
           </a>
         </div>
       </div>
+      {/* 
+      <div className="border-b pb-2">
+        <h2 className="font-medium text-lg uppercase mb-2">Timer</h2>
+        <div>
+          <button className="px-2 py-1 bg-green-700 text-white">Start</button>
+          <button className="px-2 py-1 bg-red-700 text-white">Stop</button>
+          <button className="px-2 py-1 bg-neutral-400">Reset</button>
+        </div>
+        <p className="text-3xl">0:00</p>
+      </div> */}
 
       <div>
         <h2 className="font-medium text-lg uppercase mb-2">Evidence</h2>
