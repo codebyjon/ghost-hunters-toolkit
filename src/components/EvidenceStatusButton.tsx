@@ -46,7 +46,7 @@ export default function EvidenceStatusButton(props: EvidenceStatusButtonProps) {
   return (
     <button
       onClick={state.action}
-      className={`grid grid-flow-col gap-2 justify-start items-center border-b py-2 pr-2 w-full ${state.style}`}
+      className={`grid grid-flow-col gap-2 justify-start items-center border-b py-2 pr-2 w-full text-left ${state.style}`}
     >
       <Icon icon={state.icon} className="w-6 h-6" />
       <span className="text-sm font-medium uppercase">{props.name}</span>

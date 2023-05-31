@@ -37,7 +37,7 @@ export default function SideNav(props: SideNavProps) {
         <h2 className="font-medium text-lg uppercase mb-2">Evidence</h2>
         <button
           onClick={resetEvidenceStatus}
-          className="bg-red-400/80 hover:bg-red-400/90 active:bg-red-400 py-1 p-2 rounded text-white uppercase font-medium mb-4"
+          className="bg-red-400/80 hover:bg-red-400/90 active:bg-red-400 py-1 p-2 rounded text-white text-sm uppercase font-medium mb-4"
         >
           Reset Evidence
         </button>
@@ -50,7 +50,7 @@ export default function SideNav(props: SideNavProps) {
         <h2 className="font-medium text-lg uppercase mb-2">Excluded Ghosts</h2>
         <button
           onClick={clearGhostExclusions}
-          className="bg-red-400/80 hover:bg-red-400/90 active:bg-red-400 py-1 p-2 rounded text-white uppercase font-medium mb-4"
+          className="bg-red-400/80 hover:bg-red-400/90 active:bg-red-400 py-1 p-2 rounded text-white text-sm whitespace-nowrap uppercase font-medium mb-4"
         >
           Clear Exclusions
         </button>
