@@ -14,6 +14,11 @@ export default function SideNav(props: SideNavProps) {
     removeGhostFromExclusions,
   } = useContext(AppContext);
 
+  const newGame = () => {
+    resetEvidenceStatus();
+    clearGhostExclusions();
+  };
+
   return (
     <aside className="bg-neutral-50 p-4 grid content-start gap-4">
       <div className="grid gap-2 border-b pb-2">
@@ -33,13 +38,21 @@ export default function SideNav(props: SideNavProps) {
           </a>
         </div>
       </div>
+
       <div>
         <h2 className="font-medium text-lg uppercase mb-2">Evidence</h2>
-        <button
+        {/* gonna try out not having this here and replacing it with the new game button */}
+        {/* <button
           onClick={resetEvidenceStatus}
-          className="bg-red-400/80 hover:bg-red-400/90 active:bg-red-400 py-1 p-2 rounded text-white text-sm uppercase font-medium mb-4"
+          className="bg-red-700/80 hover:bg-red-700/90 active:bg-red-700 py-1 p-2 rounded text-white text-sm uppercase font-medium mb-4"
         >
           Reset Evidence
+        </button> */}
+        <button
+          onClick={newGame}
+          className="bg-green-700/80 hover:bg-green-700/90 active:bg-green-700 py-1 p-2 rounded text-white text-sm uppercase font-medium mb-4"
+        >
+          New Game
         </button>
         <hr />
         {allEvidence.map((evidence) => (
@@ -50,7 +63,7 @@ export default function SideNav(props: SideNavProps) {
         <h2 className="font-medium text-lg uppercase mb-2">Excluded Ghosts</h2>
         <button
           onClick={clearGhostExclusions}
-          className="bg-red-400/80 hover:bg-red-400/90 active:bg-red-400 py-1 p-2 rounded text-white text-sm whitespace-nowrap uppercase font-medium mb-4"
+          className="bg-red-700/80 hover:bg-red-700/90 active:bg-red-700 py-1 p-2 rounded text-white text-sm whitespace-nowrap uppercase font-medium mb-4"
         >
           Clear Exclusions
         </button>
