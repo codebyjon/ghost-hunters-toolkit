@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-neutral-900 text-white;
+}
+
+.ghost-grid {
+  @apply grid gap-4 grid-cols-ghosts p-4 justify-start content-start;
+}
+
+.ghost-card {
+  @apply grid gap-4 p-4 rounded content-start bg-neutral-700;
+}
+
+.ghost-info {
+  @apply bg-neutral-600 p-2 rounded text-xs;
+}
+
+.sidebar {
+  @apply bg-neutral-700 p-4 grid content-start gap-4;
+}

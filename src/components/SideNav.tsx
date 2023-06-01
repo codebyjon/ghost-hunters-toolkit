@@ -21,7 +21,7 @@ export default function SideNav(props: SideNavProps) {
   };
 
   return (
-    <aside className="bg-neutral-50 p-4 grid content-start gap-4">
+    <aside className="sidebar">
       <div className="grid gap-2 border-b pb-2">
         <h2 className="text-lg uppercase font-medium">
           Ghost Hunters' Toolkit

@@ -37,7 +37,7 @@ export default function EvidenceStatusButton(props: EvidenceStatusButtonProps) {
       default:
         return setState({
           icon: "ic:baseline-question-mark",
-          style: "text-neutral-900",
+          style: "text-white",
           action: () => setEvidenceStatus(props.name, "found"),
         });
     }

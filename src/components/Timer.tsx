@@ -41,19 +41,19 @@ export default function Timer(props: TimerProps) {
       <div className="grid grid-flow-col gap-2">
         <button
           onClick={() => startTimer(25)}
-          className="p0 bg-neutral-200 rounded text-sm uppercase font-medium"
+          className="p0 bg-neutral-600 rounded text-sm uppercase font-medium"
         >
           0:25
         </button>
         <button
           onClick={() => startTimer(90)}
-          className="p-1 bg-neutral-200 rounded text-sm uppercase font-medium"
+          className="p-1 bg-neutral-600 rounded text-sm uppercase font-medium"
         >
           1:30
         </button>
         <button
           onClick={() => startTimer(180)}
-          className="p-1 bg-neutral-200 rounded text-sm uppercase font-medium"
+          className="p-1 bg-neutral-600 rounded text-sm uppercase font-medium"
         >
           3:00
         </button>
