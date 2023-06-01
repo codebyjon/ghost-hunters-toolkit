@@ -26,7 +26,11 @@ export default function SideNav(props: SideNavProps) {
         <h2 className="text-lg uppercase font-medium">
           Ghost Hunters' Toolkit
         </h2>
-        <p>Version 1.03</p>
+        <div className="text-xs border-t border-b py-2">
+          <p>Version 1.05</p>
+          <p>- Added New Game button for easy resets</p>
+          <p>- Added timer w/ common times to track</p>
+        </div>
         <p className="max-w-[28ch] text-sm">
           Found a bug or have an idea? Visit my Github or Discord server!
         </p>
