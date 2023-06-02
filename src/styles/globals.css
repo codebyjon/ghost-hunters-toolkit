@@ -7,7 +7,7 @@ body {
 }
 
 .ghost-grid {
-  @apply columns-4 gap-4 p-4;
+  @apply columns-sm gap-4 p-4;
 }
 
 .ghost-card {
