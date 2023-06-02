@@ -30,7 +30,8 @@ export default function SideNav(props: SideNavProps) {
           <p>Version 1.05</p>
           <p>- Added New Game button for easy resets</p>
           <p>- Added timer w/ common times to track</p>
-          <p>- Surprise dark mode!</p>
+          <p>- Forced dark mode until I implement switch</p>
+          <p>- Ghost info collapsible now</p>
         </div>
         <p className="max-w-[28ch] text-sm">
           Found a bug or have an idea? Visit my Github or Discord server!
