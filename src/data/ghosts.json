@@ -2,7 +2,7 @@
   {
     "name": "Banshee",
     "huntThreshold": 50,
-    "evidence": ["Fingerprints", "Ghost Orbs", "D.O.T.S"],
+    "evidence": ["Ultraviolet", "Ghost Orbs", "D.O.T.S"],
     "tips": [
       "Targets a single player at the beginning of the game. If that player dies/leaves, a new target is selected. Others will be ignored during hunts.",
       "When the hunt target is outside of the house during a hunt, the Banshee hunts similarly to other ghosts.",
@@ -14,7 +14,7 @@
   {
     "name": "Demon",
     "huntThreshold": 70,
-    "evidence": ["Fingerprints", "Ghost Writing", "Freezing Temperatures"],
+    "evidence": ["Ultraviolet", "Ghost Writing", "Freezing Temperatures"],
     "tips": [
       "A demon can trigger an ability allowing it to hunt at any sanity.",
       "The hunt triggered by this ability CAN be blocked by smudge sticks or a crucifix",
@@ -38,7 +38,7 @@
   {
     "name": "Goryo",
     "huntThreshold": 50,
-    "evidence": ["EMF 5", "Fingerprints", "D.O.T.S"],
+    "evidence": ["EMF 5", "Ultraviolet", "D.O.T.S"],
     "tips": [
       "Has a forced evidence of D.O.T.S on >= 1 evidence games.",
       "Goryo's D.O.T.S silhouettes can only be seen via a video camera when the ghost room is empty.",
@@ -49,7 +49,7 @@
   {
     "name": "Hantu",
     "huntThreshold": 50,
-    "evidence": ["Ghost Orbs", "Freezing Temperatures", "Fingerprints"],
+    "evidence": ["Ghost Orbs", "Freezing Temperatures", "Ultraviolet"],
     "tips": [
       "This ghost is NOT affected by the hunt LOS speed boost.",
       "Has a forced evidence of Freezing Temperatures on >= 1 evidence games.",
@@ -61,7 +61,7 @@
   {
     "name": "Jinn",
     "huntThreshold": 50,
-    "evidence": ["EMF 5", "Freezing Temperatures", "Fingerprints"],
+    "evidence": ["EMF 5", "Freezing Temperatures", "Ultraviolet"],
     "tips": [
       "Jinn's have increased movement speed if the breaker is on, it can see a target, and that target is > 3 meters away.",
       "Jinn's will NOT turn off a breaker. However, they can still accidentally overload a breaker and turn it off by turning on a light.",
@@ -94,7 +94,7 @@
   {
     "name": "Myling",
     "huntThreshold": 50,
-    "evidence": ["EMF 5", "Ghost Writing", "Fingerprints"],
+    "evidence": ["EMF 5", "Ghost Writing", "Ultraviolet"],
     "tips": [
       "Myling's are known for interacting with the Parabolic Microphone more often than other ghosts.",
       "Myling's footsteps are harder to detect during a hunt. They can only be heard within 12 meters, getting louder the closer they are.",
@@ -104,12 +104,12 @@
   {
     "name": "Obake",
     "huntThreshold": 50,
-    "evidence": ["EMF 5", "Ghost Orbs", "Fingerprints"],
+    "evidence": ["EMF 5", "Ghost Orbs", "Ultraviolet"],
     "tips": [
-      "Has a forced evidence of fingerprints on >= 1 evidence games.",
+      "Has a forced evidence of ultraviolet on >= 1 evidence games.",
       "An Obake will shapeshift at least once during a hunt, with a standard 6.67% chance of it happening again per \"flicker\".",
       "Obake's sometimes don't leave fingerprints when interacting and their fingerprints fade faster.",
-      "Obake's have a 16.7% chance to leave a unique fringerprint when it does leave one. These are a six fingered handprint, two fingerprints on a light instead of one, or fiver fingerprints on a keyboard or prison door, instead of four."
+      "Obake's have a 16.7% chance to leave a unique fringerprint when it does leave one. These are a six fingered handprint, two fingerprints on a light instead of one, or five fingerprints on a keyboard or prison door, instead of four."
     ]
   },
   {
@@ -131,13 +131,13 @@
       "If an Onyro attempts to hunt within range of a candle AND a crucifix, it will prioritize blowing out a candle to consuming the crucifix as a hunt prevention.",
       "Onyro's have a chance to hunt at any sanity after blowing out a candle. So the candle it blew out to prevent its last hunt may immediately trigger another.",
       "The more dead players the more likely for the Onyro to blow out a flame.",
-      "Onryo evidence matches a mimic as well, be sure to check for fingerprints. If you find any, it's a Mimic NOT a Onryo."
+      "Onryo evidence matches a mimic as well, be sure to check for ultraviolet. If you find any, it's a Mimic NOT a Onryo."
     ]
   },
   {
     "name": "Phantom",
     "huntThreshold": 50,
-    "evidence": ["Spirit Box", "Fingerprints", "D.O.T.S"],
+    "evidence": ["Spirit Box", "Ultraviolet", "D.O.T.S"],
     "tips": [
       "Phantom's fade out longer than other ghosts during a hunt (more than 1 second).",
       "A photo of a Phantom will be labeled \"ghost\" but the Phantom will not be visible on the picture.",
@@ -147,7 +147,7 @@
   {
     "name": "Poltergeist",
     "huntThreshold": 50,
-    "evidence": ["Spirit Box", "Fingerprints", "Ghost Writing"],
+    "evidence": ["Spirit Box", "Ultraviolet", "Ghost Writing"],
     "tips": [
       "Poltergeist's throw objects with more force than other ghosts.",
       "They are the only ghost that can throw more than one item at a time. (Twins technically throw in succession)",
@@ -208,7 +208,7 @@
   {
     "name": "The Mimic",
     "huntThreshold": 50,
-    "evidence": ["Spirit Box", "Fingerprints", "Freezing Temperatures"],
+    "evidence": ["Spirit Box", "Ultraviolet", "Freezing Temperatures"],
     "tips": [
       "As their name suggests, this ghost can Mimic the abilities of other ghosts and will change many times during the investigation.",
       "While the hunt threshold says 50, should it copy a demon, the threshold would be 70%. The mimic could also trigger the demon's \"hunt at any sanity\" ability. If it copies a shade, it's hunting threshold is 35%, etc.",
