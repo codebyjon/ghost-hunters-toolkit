@@ -1,4 +1,15 @@
 :root {
   --body-background-hsl: 0, 0%, 10%;
   --body-foreground-hsl: 0, 0%, 95%;
+  --navbar-background-hsl: 0, 0%, 15%;
+  --text-input-background-hsl: 0, 0%, 25%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --body-background-hsl: 0, 0%, 90%;
+    --body-foreground-hsl: 0, 0%, 5%;
+    --navbar-background-hsl: 0, 0%, 85%;
+    --text-input-background-hsl: 0, 0%, 75%;
+  }
 }

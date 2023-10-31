@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+input {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -19,4 +23,17 @@ h5 {
 body {
   color: hsl(var(--body-foreground-hsl));
   background-color: hsl(var(--body-background-hsl));
+}
+
+input {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  color: var(--body-foreground-hsl);
+  background-color: hsl(var(--text-input-background-hsl));
+
+  &:focus-visible {
+    outline: 2px solid hsl(20, 60%, 60%);
+    outline-offset: -2px;
+  }
 }

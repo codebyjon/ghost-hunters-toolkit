@@ -1,0 +1,28 @@
+@keyframes float {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(1px, -1px);
+    opacity: 0.75;
+  }
+  40% {
+    transform: translate(-1px, 1px);
+    opacity: 0.6;
+  }
+  60% {
+    transform: translate(1px, 1px);
+    opacity: 0.75;
+  }
+  80% {
+    transform: translate(-1px, -1px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+.floating {
+  animation: float 5s infinite ease-in;
+}
