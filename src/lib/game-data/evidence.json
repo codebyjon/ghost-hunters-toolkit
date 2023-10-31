@@ -1,30 +1,30 @@
 [
   {
     "name": "D.O.T.S",
-    "image_path": "/img/evidence/dots_evidence.webp"
+    "imagePath": "/img/evidence/dots_evidence.webp"
   },
   {
     "name": "EMF 5",
-    "image_path": "/img/evidence/emf5_evidence.webp"
+    "imagePath": "/img/evidence/emf5_evidence.webp"
   },
   {
     "name": "Ultraviolet",
-    "image_path": "/img/evidence/uv_evidence.webp"
+    "imagePath": "/img/evidence/uv_evidence.webp"
   },
   {
     "name": "Freezing Temperatures",
-    "image_path": "/img/evidence/freezing_temperatures_evidence.webp"
+    "imagePath": "/img/evidence/freezing_temperatures_evidence.webp"
   },
   {
     "name": "Ghost Orbs",
-    "image_path": "/img/evidence/ghost_orbs_evidence.webp"
+    "imagePath": "/img/evidence/ghost_orbs_evidence.webp"
   },
   {
     "name": "Ghost Writing",
-    "image_path": "/img/evidence/ghost_writing_evidence.webp"
+    "imagePath": "/img/evidence/ghost_writing_evidence.webp"
   },
   {
     "name": "Spirit Box",
-    "image_path": "/img/evidence/spirit_box_evidence.webp"
+    "imagePath": "/img/evidence/spirit_box_evidence.webp"
   }
 ]

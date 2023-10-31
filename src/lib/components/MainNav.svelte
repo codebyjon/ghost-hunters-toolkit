@@ -38,9 +38,6 @@
   }
 
   .app-bar {
-    position: fixed;
-    left: 0;
-    right: 0;
     background-color: hsl(var(--navbar-background-hsl));
     box-shadow: 2px 0 10px hsla(0, 0%, 0%, 20%);
   }

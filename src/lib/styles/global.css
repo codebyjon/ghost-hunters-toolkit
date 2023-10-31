@@ -23,6 +23,7 @@ h5 {
 body {
   color: hsl(var(--body-foreground-hsl));
   background-color: hsl(var(--body-background-hsl));
+  font-family: Inter;
 }
 
 input {
