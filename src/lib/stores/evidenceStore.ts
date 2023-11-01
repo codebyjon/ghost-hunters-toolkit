@@ -1,20 +1,30 @@
-import evidence from "$lib/game-data/evidence.json";
-import { writable, get } from "svelte/store";
+import type { Evidence } from "$lib/types/evidence";
+import type { Writable } from "svelte/store";
 
-const evidenceStore = writable(
-  evidence.map((e) => ({
-    ...e,
-    status: 0,
-  }))
-);
+import evidenceData from "$lib/game-data/evidence.json";
+import { writable } from "svelte/store";
 
-export const stepStatus = (index: number) => {
-  evidenceStore.update((ea) => {
-    const target = ea[index];
-    target.status = target.status < 2 ? target.status + 1 : 0;
-    console.log(ea[index]);
-    return [...ea];
-  });
-};
+class EvidenceStore {
+  store: Writable<Evidence[]>;
 
-export default evidenceStore;
+  constructor() {
+    const initalState = evidenceData.map((e) => ({ ...e, status: 0 }));
+    this.store = writable<Evidence[]>(initalState);
+  }
+
+  stepEvidenceStatus(i: number) {
+    this.store.update((es) => {
+      const updatedEvidence = [...es];
+      const nextValue =
+        updatedEvidence[i].status < 2 ? updatedEvidence[i].status + 1 : 0;
+
+      updatedEvidence[i] = {
+        ...updatedEvidence[i],
+        status: nextValue,
+      };
+      return updatedEvidence;
+    });
+  }
+}
+
+export default new EvidenceStore();
