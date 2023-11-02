@@ -7,6 +7,7 @@ import { writable, get } from "svelte/store";
 class EvidenceStore {
   store: Writable<Evidence[]>;
   initialState: Evidence[];
+  foundEvidence: string[] = [];
 
   constructor() {
     this.initialState = evidenceData.map((e) => ({ ...e, status: 0 }));
@@ -14,7 +15,6 @@ class EvidenceStore {
 
     this.stepEvidenceStatus = this.stepEvidenceStatus.bind(this);
     this.resetEvidence = this.resetEvidence.bind(this);
-    this.getFoundEvidence = this.getFoundEvidence.bind(this);
   }
 
   stepEvidenceStatus(i: number) {
@@ -28,6 +28,7 @@ class EvidenceStore {
         ...updatedEvidence[i],
         status: nextValue,
       };
+
       return updatedEvidence;
     });
   }
@@ -45,10 +46,6 @@ class EvidenceStore {
     if (currentStatus !== 0) return true;
     if (this.countFoundEvidence() < 3) return true;
     return false;
-  }
-
-  getFoundEvidence(): Evidence[] {
-    return get(this.store).filter((e) => e.status === 1);
   }
 
   getEvidenceImage(name: string) {

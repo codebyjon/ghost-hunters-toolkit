@@ -20,7 +20,9 @@
     {#each evidence as evidence}
       <div class="evidence-cell">
         <img src={evidenceStore.getEvidenceImage(evidence)} alt={evidence} />
-        <p class="evidence-label">{evidence}</p>
+        <p class={`evidence-label`}>
+          {evidence}
+        </p>
       </div>
     {/each}
   </div>
@@ -100,5 +102,9 @@
     &:hover {
       background-color: hsl(0, 0%, 25%);
     }
+  }
+
+  .found-evidence {
+    color: green;
   }
 </style>
