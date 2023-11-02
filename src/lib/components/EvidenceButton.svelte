@@ -1,7 +1,7 @@
 <script lang="ts">
-  import NotFound from "$lib/assets/not-found.svg";
-  import Found from "$lib/assets/found.svg";
-  import Excluded from "$lib/assets/excluded.svg";
+  import NotFoundIcon from "$lib/components/icons/NotFoundIcon.svelte";
+  import FoundIcon from "$lib/components/icons/FoundIcon.svelte";
+  import ExcludedIcon from "$lib/components/icons/ExcludedIcon.svelte";
 
   export let index: number;
   export let name: string;
@@ -11,15 +11,15 @@
 </script>
 
 <button class="evidence-button" on:click={() => handleClick(index)}>
-  <img src={imagePath} alt={name} />
-  {name}
   {#if status === 0}
-    <img src={NotFound} alt="Not Found" />
+    <NotFoundIcon />
   {:else if status === 1}
-    <img src={Found} alt="Found" />
+    <FoundIcon />
   {:else}
-    <img src={Excluded} alt="Excluded" />
+    <ExcludedIcon />
   {/if}
+  {name}
+  <img src={imagePath} alt={name} />
 </button>
 
 <style>
@@ -32,6 +32,7 @@
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    justify-content: space-between;
     font-size: 0.75rem;
     letter-spacing: 1px;
     text-transform: uppercase;

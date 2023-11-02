@@ -14,7 +14,7 @@
   {
     "name": "Demon",
     "huntThreshold": 70,
-    "evidence": ["Ultraviolet", "Ghost Writing", "Freezing Temperatures"],
+    "evidence": ["Ultraviolet", "Ghost Writing", "Freezing"],
     "tips": [
       "A demon can trigger an ability allowing it to hunt at any sanity.",
       "The hunt triggered by this ability CAN be blocked by smudge sticks or a crucifix",
@@ -49,7 +49,7 @@
   {
     "name": "Hantu",
     "huntThreshold": 50,
-    "evidence": ["Ghost Orbs", "Freezing Temperatures", "Ultraviolet"],
+    "evidence": ["Ghost Orbs", "Freezing", "Ultraviolet"],
     "tips": [
       "This ghost is NOT affected by the hunt LOS speed boost.",
       "Has a forced evidence of Freezing Temperatures on >= 1 evidence games.",
@@ -61,7 +61,7 @@
   {
     "name": "Jinn",
     "huntThreshold": 50,
-    "evidence": ["EMF 5", "Freezing Temperatures", "Ultraviolet"],
+    "evidence": ["EMF 5", "Freezing", "Ultraviolet"],
     "tips": [
       "Jinn's have increased movement speed if the breaker is on, it can see a target, and that target is > 3 meters away.",
       "Jinn's will NOT turn off a breaker. However, they can still accidentally overload a breaker and turn it off by turning on a light.",
@@ -83,7 +83,7 @@
   {
     "name": "Moroi",
     "huntThreshold": 50,
-    "evidence": ["Spirit Box", "Ghost Writing", "Freezing Temperatures"],
+    "evidence": ["Spirit Box", "Ghost Writing", "Freezing"],
     "tips": [
       "Has a forced evidence of spirit box in >= 1 evidence games.",
       "Moroi's curse the players they respond to on the spirit box or parabolic, doubling their sanity drain rate.",
@@ -115,7 +115,7 @@
   {
     "name": "Oni",
     "huntThreshold": 50,
-    "evidence": ["EMF 5", "Freezing Temperatures", "D.O.T.S"],
+    "evidence": ["EMF 5", "Freezing", "D.O.T.S"],
     "tips": [
       "Oni's are more active when people are nearby.",
       "Oni's flicker less than other ghosts during hunts.",
@@ -126,7 +126,7 @@
   {
     "name": "Onryo",
     "huntThreshold": 60,
-    "evidence": ["Spirit Box", "Ghost Orbs", "Freezing Temperatures"],
+    "evidence": ["Spirit Box", "Ghost Orbs", "Freezing"],
     "tips": [
       "If an Onyro attempts to hunt within range of a candle AND a crucifix, it will prioritize blowing out a candle to consuming the crucifix as a hunt prevention.",
       "Onyro's have a chance to hunt at any sanity after blowing out a candle. So the candle it blew out to prevent its last hunt may immediately trigger another.",
@@ -167,7 +167,7 @@
   {
     "name": "Revenant",
     "huntThreshold": 50,
-    "evidence": ["Ghost Orbs", "Ghost Writing", "Freezing Temperatures"],
+    "evidence": ["Ghost Orbs", "Ghost Writing", "Freezing"],
     "tips": [
       "This ghost is NOT affected by the hunt LOS speed boost.",
       "Revenant's are slow while searching for a target, but significantly faster once they see their target.",
@@ -177,7 +177,7 @@
   {
     "name": "Shade",
     "huntThreshold": 35,
-    "evidence": ["EMF 5", "Ghost Writing", "Freezing Temperatures"],
+    "evidence": ["EMF 5", "Ghost Writing", "Freezing"],
     "tips": [
       "Shades are less likely to interact based on current sanity. This is reduced by 2% per sanity percentage lost. At 50% sanity, there is no penalty to the change of an interaction.",
       "Shades are more likely (67% chance per event) to trigger the ghost mists event or to manifest as a shadow figure.",
@@ -208,7 +208,7 @@
   {
     "name": "The Mimic",
     "huntThreshold": 50,
-    "evidence": ["Spirit Box", "Ultraviolet", "Freezing Temperatures"],
+    "evidence": ["Spirit Box", "Ultraviolet", "Freezing"],
     "tips": [
       "As their name suggests, this ghost can Mimic the abilities of other ghosts and will change many times during the investigation.",
       "While the hunt threshold says 50, should it copy a demon, the threshold would be 70%. The mimic could also trigger the demon's \"hunt at any sanity\" ability. If it copies a shade, it's hunting threshold is 35%, etc.",
@@ -218,7 +218,7 @@
   {
     "name": "The Twins",
     "huntThreshold": 50,
-    "evidence": ["EMF 5", "Spirit Box", "Freezing Temperatures"],
+    "evidence": ["EMF 5", "Spirit Box", "Freezing"],
     "tips": [
       "Twin's have a 50% chance to start the hunt in either the ghost room or the room it last had an interaction in using it's ability.",
       "The crucifix must be in the location where the hunt starts.",
@@ -247,7 +247,7 @@
   {
     "name": "Yurei",
     "huntThreshold": 50,
-    "evidence": ["Ghost Orbs", "Freezing Temperatures", "D.O.T.S"],
+    "evidence": ["Ghost Orbs", "Freezing", "D.O.T.S"],
     "tips": [
       "Smudging a Yurei before a hunt will banish it to it's ghost room and trap it for 60 seconds. It can leave for a ghost event, but will return after.",
       "Yurei's ability can drain the sanity of all players within 7.5 meters by 15%.",
