@@ -1,7 +1,7 @@
 [
   {
     "name": "Banshee",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["Ultraviolet", "Ghost Orbs", "D.O.T.S"],
     "tips": [
       "Targets a single player at the beginning of the game. If that player dies/leaves, a new target is selected. Others will be ignored during hunts.",
@@ -13,7 +13,7 @@
   },
   {
     "name": "Demon",
-    "huntThreshold": 70,
+    "huntSanity": 70,
     "evidence": ["Ultraviolet", "Ghost Writing", "Freezing"],
     "tips": [
       "A demon can trigger an ability allowing it to hunt at any sanity.",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Deogen",
-    "huntThreshold": 40,
+    "huntSanity": 40,
     "evidence": ["Spirit Box", "Ghost Writing", "D.O.T.S"],
     "tips": [
       "This ghost is NOT affected by the hunt LOS speed boost.",
@@ -37,7 +37,7 @@
   },
   {
     "name": "Goryo",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["EMF 5", "Ultraviolet", "D.O.T.S"],
     "tips": [
       "Has a forced evidence of D.O.T.S on >= 1 evidence games.",
@@ -48,7 +48,7 @@
   },
   {
     "name": "Hantu",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["Ghost Orbs", "Freezing", "Ultraviolet"],
     "tips": [
       "This ghost is NOT affected by the hunt LOS speed boost.",
@@ -60,7 +60,7 @@
   },
   {
     "name": "Jinn",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["EMF 5", "Freezing", "Ultraviolet"],
     "tips": [
       "Jinn's have increased movement speed if the breaker is on, it can see a target, and that target is > 3 meters away.",
@@ -71,7 +71,7 @@
   },
   {
     "name": "Mare",
-    "huntThreshold": 60,
+    "huntSanity": 60,
     "evidence": ["Spirit Box", "Ghost Orbs", "Ghost Writing"],
     "tips": [
       "If the lights are on in the same room as the Mare, the hunt threshold drops to <= 40% sanity.",
@@ -82,7 +82,7 @@
   },
   {
     "name": "Moroi",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["Spirit Box", "Ghost Writing", "Freezing"],
     "tips": [
       "Has a forced evidence of spirit box in >= 1 evidence games.",
@@ -93,7 +93,7 @@
   },
   {
     "name": "Myling",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["EMF 5", "Ghost Writing", "Ultraviolet"],
     "tips": [
       "Myling's are known for interacting with the Parabolic Microphone more often than other ghosts.",
@@ -103,7 +103,7 @@
   },
   {
     "name": "Obake",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["EMF 5", "Ghost Orbs", "Ultraviolet"],
     "tips": [
       "Has a forced evidence of ultraviolet on >= 1 evidence games.",
@@ -114,7 +114,7 @@
   },
   {
     "name": "Oni",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["EMF 5", "Freezing", "D.O.T.S"],
     "tips": [
       "Oni's are more active when people are nearby.",
@@ -125,7 +125,7 @@
   },
   {
     "name": "Onryo",
-    "huntThreshold": 60,
+    "huntSanity": 60,
     "evidence": ["Spirit Box", "Ghost Orbs", "Freezing"],
     "tips": [
       "If an Onyro attempts to hunt within range of a candle AND a crucifix, it will prioritize blowing out a candle to consuming the crucifix as a hunt prevention.",
@@ -136,7 +136,7 @@
   },
   {
     "name": "Phantom",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["Spirit Box", "Ultraviolet", "D.O.T.S"],
     "tips": [
       "Phantom's fade out longer than other ghosts during a hunt (more than 1 second).",
@@ -146,7 +146,7 @@
   },
   {
     "name": "Poltergeist",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["Spirit Box", "Ultraviolet", "Ghost Writing"],
     "tips": [
       "Poltergeist's throw objects with more force than other ghosts.",
@@ -156,7 +156,7 @@
   },
   {
     "name": "Raiju",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["EMF 5", "Ghost Orbs", "D.O.T.S"],
     "tips": [
       "Raiju's can hunt at 65% if near active electrical equipment.",
@@ -166,7 +166,7 @@
   },
   {
     "name": "Revenant",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["Ghost Orbs", "Ghost Writing", "Freezing"],
     "tips": [
       "This ghost is NOT affected by the hunt LOS speed boost.",
@@ -176,7 +176,7 @@
   },
   {
     "name": "Shade",
-    "huntThreshold": 35,
+    "huntSanity": 35,
     "evidence": ["EMF 5", "Ghost Writing", "Freezing"],
     "tips": [
       "Shades are less likely to interact based on current sanity. This is reduced by 2% per sanity percentage lost. At 50% sanity, there is no penalty to the change of an interaction.",
@@ -186,7 +186,7 @@
   },
   {
     "name": "Spirit",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["EMF 5", "Ghost Writing", "Spirit Box"],
     "tips": [
       "Spirits are a baseline ghost with no distinct strengths.",
@@ -195,7 +195,7 @@
   },
   {
     "name": "Thaye",
-    "huntThreshold": 75,
+    "huntSanity": 75,
     "evidence": ["Ghost Orbs", "Ghost Writing", "D.O.T.S"],
     "tips": [
       "This ghost is NOT affected by the hunt LOS speed boost.",
@@ -207,7 +207,7 @@
   },
   {
     "name": "The Mimic",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["Spirit Box", "Ultraviolet", "Freezing"],
     "tips": [
       "As their name suggests, this ghost can Mimic the abilities of other ghosts and will change many times during the investigation.",
@@ -217,7 +217,7 @@
   },
   {
     "name": "The Twins",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["EMF 5", "Spirit Box", "Freezing"],
     "tips": [
       "Twin's have a 50% chance to start the hunt in either the ghost room or the room it last had an interaction in using it's ability.",
@@ -227,7 +227,7 @@
   },
   {
     "name": "Wraith",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["EMF 5", "Spirit Box", "D.O.T.S"],
     "tips": [
       "While NOT hunting Wraith's will sometimes teleport within 3 meters of a random player, triggering an EMF 2 (25% chance for EMF 5) reading at the player.",
@@ -237,7 +237,7 @@
   },
   {
     "name": "Yokai",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["Ghost Orbs", "Spirit Box", "D.O.T.S"],
     "tips": [
       "Yokai's become more angry if a player talks within 2 meters of the ghost. This raises the hunt threshold to 80% temporarily.",
@@ -246,7 +246,7 @@
   },
   {
     "name": "Yurei",
-    "huntThreshold": 50,
+    "huntSanity": 50,
     "evidence": ["Ghost Orbs", "Freezing", "D.O.T.S"],
     "tips": [
       "Smudging a Yurei before a hunt will banish it to it's ghost room and trap it for 60 seconds. It can leave for a ghost event, but will return after.",

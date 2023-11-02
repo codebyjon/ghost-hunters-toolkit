@@ -3,7 +3,7 @@
   import type { Evidence } from "$lib/types/evidence";
 
   import evidenceStore from "$lib/stores/evidenceStore";
-  import Container from "./Container.svelte";
+  import Container from "$lib/components/Container.svelte";
   import EvidenceButton from "./EvidenceButton.svelte";
 
   let evidenceList: Writable<Evidence[]> = evidenceStore.store;
@@ -11,7 +11,7 @@
 
 <div class="evidence-bar">
   <Container>
-    <div class="evidence-content">
+    <div class="evidence-buttons">
       {#each $evidenceList as evidence, index}
         <EvidenceButton
           {index}
@@ -31,10 +31,11 @@
     background-color: hsl(0, 0%, 20%);
   }
 
-  .evidence-content {
+  .evidence-buttons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-content: center;
     gap: 0.5rem;
-    padding: 0 0.5rem;
+    flex: 1;
   }
 </style>

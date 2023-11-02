@@ -50,6 +50,10 @@ class EvidenceStore {
   getFoundEvidence(): Evidence[] {
     return get(this.store).filter((e) => e.status === 1);
   }
+
+  getEvidenceImage(name: string) {
+    return this.initialState.find((e) => e.name === name)?.imagePath;
+  }
 }
 
 export default new EvidenceStore();

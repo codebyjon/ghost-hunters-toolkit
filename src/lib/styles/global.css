@@ -20,6 +20,11 @@ h5 {
   font-weight: 400;
 }
 
+ol,
+ul {
+  list-style-type: none;
+}
+
 body {
   color: hsl(var(--body-foreground-hsl));
   background-color: hsl(var(--body-background-hsl));
