@@ -32,10 +32,22 @@
   }
 
   .evidence-buttons {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    justify-content: center;
-    gap: 0.5rem;
     flex: 1;
+    display: grid;
+    gap: 0.5rem;
+
+    @media (min-width: 470px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 848px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 1248px) {
+      @media (min-width: 470px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
   }
 </style>

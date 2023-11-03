@@ -4,11 +4,12 @@
 
   import ghostStore from "$lib/stores/ghostStore";
   import GhostCard from "./GhostCard.svelte";
+  import MasonryGrid from "../MasonryGrid.svelte";
 
   let ghostList: Writable<Ghost[]> = ghostStore.store;
 </script>
 
-<div class="ghost-grid">
+<div>
   {#each $ghostList as ghost (ghost.name)}
     <GhostCard
       name={ghost.name}
@@ -18,21 +19,3 @@
     />
   {/each}
 </div>
-
-<style>
-  .ghost-grid {
-    padding-top: 1rem;
-    display: grid;
-    gap: 1rem;
-    justify-content: center;
-    padding: 1rem 0;
-
-    @media (min-width: 600px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-</style>

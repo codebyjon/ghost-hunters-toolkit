@@ -38,6 +38,7 @@
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 0.25rem;
+    min-width: max-content;
 
     &:hover {
       background-color: hsl(0, 0%, 25%);

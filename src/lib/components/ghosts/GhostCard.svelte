@@ -13,7 +13,7 @@
   };
 </script>
 
-<div class="ghost-card">
+<div class="ghost-card masonry-item">
   <p class="ghost-name">{name}</p>
   <p>Hunt Sanity: <strong>{huntSanity}%</strong></p>
   <div class="evidence-row">
@@ -43,9 +43,8 @@
     padding: 1rem;
     background-color: hsl(0, 0%, 20%);
     border-radius: 0.25rem;
-    align-content: flex-start;
-    align-self: flex-start;
     min-height: 100%;
+    break-inside: avoid-column;
   }
 
   .evidence-row {

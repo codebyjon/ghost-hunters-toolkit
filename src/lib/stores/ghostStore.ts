@@ -3,7 +3,7 @@ import type { Writable } from "svelte/store";
 
 import ghostData from "$lib/game-data/ghosts.json";
 import evidenceStore from "./evidenceStore";
-import { writable, get } from "svelte/store";
+import { writable } from "svelte/store";
 
 class GhostStore {
   store: Writable<Ghost[]>;
