@@ -17,11 +17,11 @@
   <p class="ghost-name">{name}</p>
   <p>Hunt Sanity: <strong>{huntSanity}%</strong></p>
   <div class="evidence-row">
-    {#each evidence as evidence}
+    {#each evidence as e}
       <div class="evidence-cell">
-        <img src={evidenceStore.getEvidenceImage(evidence)} alt={evidence} />
+        <img src={evidenceStore.getEvidenceImage(e)} alt={e} />
         <p class={`evidence-label`}>
-          {evidence}
+          {e}
         </p>
       </div>
     {/each}

@@ -9,7 +9,7 @@
 </script>
 
 <div class="ghost-grid">
-  {#each $ghostList as ghost, index}
+  {#each $ghostList as ghost (ghost.name)}
     <GhostCard
       name={ghost.name}
       huntSanity={ghost.huntSanity}

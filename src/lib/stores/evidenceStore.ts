@@ -7,7 +7,6 @@ import { writable, get } from "svelte/store";
 class EvidenceStore {
   store: Writable<Evidence[]>;
   initialState: Evidence[];
-  foundEvidence: string[] = [];
 
   constructor() {
     this.initialState = evidenceData.map((e) => ({ ...e, status: 0 }));
@@ -50,6 +49,22 @@ class EvidenceStore {
 
   getEvidenceImage(name: string) {
     return this.initialState.find((e) => e.name === name)?.imagePath;
+  }
+
+  getFoundEvidenceNames(): string[] {
+    return get(this.store).reduce<string[]>((acc, curr) => {
+      if (curr.status !== 1) return acc;
+      acc.push(curr.name);
+      return acc;
+    }, []);
+  }
+
+  getExcludedEvidenceNames(): string[] {
+    return get(this.store).reduce<string[]>((acc, curr) => {
+      if (curr.status !== 2) return acc;
+      acc.push(curr.name);
+      return acc;
+    }, []);
   }
 }
 
