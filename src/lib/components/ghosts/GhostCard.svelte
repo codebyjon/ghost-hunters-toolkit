@@ -82,7 +82,6 @@
 
   .ghost-tip {
     font-size: 0.875rem;
-    font-weight: 300;
   }
 
   .toggle-tips-button {
