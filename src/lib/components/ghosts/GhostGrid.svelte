@@ -62,14 +62,14 @@
 <style>
   .grid {
     display: flex;
-    gap: 1rem;
-    padding: 1rem 0;
+    gap: 2rem;
+    padding: 2rem 0;
   }
 
   .column {
     flex: 1;
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     align-content: flex-start;
   }
 </style>

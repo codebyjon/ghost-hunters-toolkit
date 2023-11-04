@@ -1,5 +1,6 @@
 <script lang="ts">
   import evidenceStore from "$lib/stores/evidenceStore";
+  import HuntIcon from "$lib/components/icons/HuntIcon.svelte";
 
   export let name: string;
   export let huntSanity: number;
@@ -14,8 +15,13 @@
 </script>
 
 <div class="ghost-card masonry-item">
-  <p class="ghost-name">{name}</p>
-  <p>Hunt Sanity: <strong>{huntSanity}%</strong></p>
+  <div class="name-sanity-row">
+    <p class="ghost-name">{name}</p>
+    <div class="hunt-sanity">
+      <HuntIcon />
+      <p><strong>{huntSanity}%</strong></p>
+    </div>
+  </div>
   <div class="evidence-row">
     {#each evidence as e}
       <div class="evidence-cell">
@@ -39,12 +45,24 @@
 <style>
   .ghost-card {
     display: grid;
-    gap: 0.5rem;
+    gap: 1rem;
     padding: 1rem;
-    background-color: hsl(0, 0%, 20%);
+    background-color: hsl(0, 0%, 15%);
     border-radius: 0.25rem;
     min-height: 100%;
     break-inside: avoid-column;
+  }
+
+  .name-sanity-row {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .hunt-sanity {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 0.25rem;
   }
 
   .evidence-row {
@@ -66,7 +84,7 @@
   }
 
   .ghost-name {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .tip-list {
