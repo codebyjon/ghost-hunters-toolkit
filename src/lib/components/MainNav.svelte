@@ -2,6 +2,7 @@
   import "$lib/styles/animations.css";
 
   import Container from "./Container.svelte";
+  import evidenceStore from "$lib/stores/evidenceStore";
 </script>
 
 <div class="app-bar">
@@ -13,9 +14,7 @@
         class="brand floating"
       />
       <span class="link-area">
-        <div
-          style="background: #333; border-radius: 100%; width: 32px; height: 32px;"
-        />
+        <button on:click={evidenceStore.resetEvidence}>New Game</button>
         <div
           style="background: #333; border-radius: 100%; width: 32px; height: 32px;"
         />

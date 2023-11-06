@@ -24,24 +24,9 @@
 
 <style>
   .evidence-button {
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    border: 0;
-    color: hsl(var(--body-foreground-hsl));
-    background-color: hsl(0, 0%, 23%);
     display: flex;
     gap: 0.5rem;
     align-items: center;
     justify-content: space-between;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 700;
-    border-radius: 0.25rem;
-    min-width: max-content;
-
-    &:hover {
-      background-color: hsl(0, 0%, 25%);
-    }
   }
 </style>
